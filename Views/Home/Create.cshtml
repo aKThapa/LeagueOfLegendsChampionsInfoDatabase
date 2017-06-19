@@ -1,0 +1,36 @@
+﻿@model DatabaseStuff.Models.Champion
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+<div class="form-group">
+@using (Html.BeginForm())
+{
+
+    <h4>Champion</h4>
+
+    @Html.LabelFor(c => c.ImageURL)
+    @Html.EditorFor(c => c.ImageURL)
+
+    @Html.LabelFor(c => c.Name)
+    @Html.EditorFor(c => c.Name)
+
+    @Html.LabelFor(c => c.Title)
+    @Html.EditorFor(c => c.Title)
+
+    @Html.LabelFor(c => c.Role)
+    @Html.EditorFor(c => c.Role)
+
+    @Html.LabelFor(c => c.Description)
+    @Html.EditorFor(c => c.Description)
+
+    <input type="submit" value="Create Champion"/>
+}
+    </div>
+
+@Html.ActionLink("Back to list", "Index")
+
+

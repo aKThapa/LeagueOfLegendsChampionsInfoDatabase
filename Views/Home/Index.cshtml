@@ -1,0 +1,56 @@
+﻿@model IEnumerable<DatabaseStuff.Models.Champion>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Database : League Of Legends</h2>
+<hr/>
+<p>
+    @Html.ActionLink("Create New" , "Create")
+    </p>
+
+<table class="table">
+    <tr>
+        <th>Image</th>
+        <th>@Html.DisplayNameFor(champion => champion.Name) </th>
+    
+        @*<th>
+            @Html.DisplayNameFor(champion => champion.Title)
+        </th>*@
+    
+        <th> @Html.DisplayNameFor(champion => champion.Role) </th>
+        
+        <th> Edit </th>
+        <th> Details </th>
+   
+                @*<th>
+                @Html.DisplayNameFor(model => model.Price)
+        </th>*@
+            
+    </tr>
+
+    @foreach (var i in Model)
+    {
+        <tr>
+          
+            <td class="tdClass"><img class = "img-responsive" src="@Url.Content(i.ImageURL)"/></td>
+          
+          <td>@Html.DisplayFor(model => i.Name)</td>
+        
+            <td>@Html.DisplayFor(model => i.Role)</td>
+        
+            @*<td>@Html.DisplayFor(model => i.Genre)</td>
+        
+            <td>@Html.DisplayFor(model => i.Price)</td>*@
+
+            <td>@Html.ActionLink("Edit" , "Edit", new { id = i.ID})</td>
+
+            <td>@Html.ActionLink("Details", "Details", new { id = i.ID })</td>
+
+            @*<td>@Html.ActionLink("Delete Record", "Delete", new { id = i.ID })</td>*@
+
+        </tr>
+    }
+</table>
+

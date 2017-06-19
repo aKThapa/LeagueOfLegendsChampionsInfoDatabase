@@ -1,0 +1,55 @@
+﻿@model DatabaseStuff.Models.Champion
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+       @using (Html.BeginForm())
+         {
+   
+            <h4 class="text-center">Champion</h4>
+            <div class="form-group">
+            @Html.LabelFor(c => c.ImageURL)
+            @Html.EditorFor(c => c.ImageURL)
+                @*@Html.EditorFor(c => c.ImageURL, new { @class = "form-control" })*@
+                </div>
+
+            <div class="form-group">
+                @Html.LabelFor(c => c.Name)
+               @Html.EditorFor(c => c.Name)
+                </div>
+
+           <div class="form-group">
+            @Html.LabelFor(c => c.Title)
+            @Html.EditorFor(c => c.Title)
+            </div>
+
+            <div class="form-group">
+               @Html.LabelFor(c => c.Role)
+               @Html.EditorFor(c => c.Role)
+                    
+                </div>
+
+            <div class="form-group">
+            @Html.LabelFor(c => c.Description)
+                <div>
+            @Html.TextAreaFor(c => c.Description)</div>
+                </div>
+
+            <input type="submit" value="Save Changes" class="btn btn-default" />
+         }
+        </div>
+    <div class="col-md-2"></div>
+
+    </div>
+
+    @Html.ActionLink("Back to list", "Index")
+
+
+
+

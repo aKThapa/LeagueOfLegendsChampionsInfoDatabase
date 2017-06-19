@@ -1,0 +1,113 @@
+﻿body {
+    background-image: url("/Content/Images/bgImage.jpg");
+    height: 100vh;
+    background-position: center;
+   
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Crimson Text', serif;
+    font-size: 150%;
+    color: black;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #fffb00;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #fffb00;
+}
+
+a {
+    color: #58b972;
+}
+
+a:hover {
+    color: yellow;
+}
+
+.navbar {
+    background-color: rgb(37, 34, 36);
+}
+
+h2 {
+    color: #d7c875;
+    text-align: center;
+}
+
+.customContainer {
+    background-color: #000000;
+    color:  #fffb00;
+}
+
+.customContainer2 {
+    background-color: black;
+}
+
+th {
+    text-align: left;
+    font-size: 150%;
+    color: gold;
+}
+
+td {
+    color: #d7c875;
+    font-size: 120%;
+}
+
+hr {
+    height: 15px;
+    background-color: #fffb00;
+}
+
+th, tr {
+    border-color: black;
+}
+
+img {
+    margin: 0px;
+}
+.img-responsive {
+    max-width: 45%;
+}
+
+.custom-image-width {
+    max-width:100%;
+}
+
+.noMarginTop {
+    margin-top: 0px;
+}
+
+.labelName {
+    width:200px;
+    display: inline-block;
+}
+
+#Role, .text-box, single-line {
+    width: 100%;
+    /*display: inline-block;*/
+}
+
+input {
+    max-width:100%;
+}
+
+textarea {
+    max-width:100%;
+}
+#Description {
+    height: 500px;
+    width: 100%;
+}
+
+.tdClass {
+    width: 500px !important;
+}
+
+@media all and (max-width:300px ) {
+    th {
+        padding: 1px;
+    }
+} 
